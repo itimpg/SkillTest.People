@@ -1,10 +1,9 @@
-﻿namespace SkillTest.Infra.DatabaseContext
+﻿using System.Data;
+
+namespace SkillTest.Infra.DatabaseContext
 {
     public class WriteDbContext : ApplicationDbContext
     {
-        public WriteDbContext(string connectionString)
-            : base(connectionString)
-        {
-        }
+        public WriteDbContext(IDbConnection connection) : base(connection) { }
     }
 }

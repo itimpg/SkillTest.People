@@ -1,5 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using System.Data;
+﻿using System.Data;
 
 namespace SkillTest.Infra.DatabaseContext
 {
@@ -7,11 +6,11 @@ namespace SkillTest.Infra.DatabaseContext
     {
         private readonly IDbConnection _connection;
 
-        public ApplicationDbContext(string connectionString)
+        protected ApplicationDbContext(IDbConnection connection)
         {
-            _connection = new SqlConnection(connectionString);
+            _connection = connection;
         }
 
-        public IDbConnection DbConnection => _connection;
+        public virtual IDbConnection DbConnection => _connection;
     }
 }

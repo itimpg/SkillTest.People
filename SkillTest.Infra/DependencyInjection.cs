@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SkillTest.Core.RepositoryContracts;
 using SkillTest.Infra.DatabaseContext;
@@ -15,15 +16,18 @@ namespace SkillTest.Infra
             {
                 var configuration = provider.GetRequiredService<IConfiguration>();
                 var connectionString = configuration.GetConnectionString("ReadConnection");
-                return new ReadDbContext(connectionString!);
+                var connection = new SqlConnection(connectionString);
+                return new ReadDbContext(connection);
             });
 
             services.AddScoped<WriteDbContext>(provider =>
             {
                 var configuration = provider.GetRequiredService<IConfiguration>();
                 var connectionString = configuration.GetConnectionString("WriteConnection");
-                return new WriteDbContext(connectionString!);
+                var connection = new SqlConnection(connectionString);
+                return new WriteDbContext(connection);
             });
+
 
             return services;
         }

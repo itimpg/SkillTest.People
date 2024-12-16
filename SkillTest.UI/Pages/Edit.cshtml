@@ -8,6 +8,7 @@
 <div class="card">
     <div class="card-body">
         <form method="post">
+            <input type="hidden" asp-for="Person.Id"/>
             <div class="form-group mb-2">
                 <label for="FirstName">First Name</label>
                 <input type="text" id="FirstName" name="Person.FirstName" class="form-control" value="@Model.Person.FirstName" />

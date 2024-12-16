@@ -1,10 +1,9 @@
-﻿namespace SkillTest.Infra.DatabaseContext
+﻿using System.Data;
+
+namespace SkillTest.Infra.DatabaseContext
 {
     public class ReadDbContext : ApplicationDbContext
     {
-        public ReadDbContext(string connectionString)
-            : base(connectionString)
-        {
-        }
+        public ReadDbContext(IDbConnection connection) : base(connection) { }
     }
 }

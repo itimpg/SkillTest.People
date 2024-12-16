@@ -1,0 +1,33 @@
+﻿@page
+@model SkillTest.UI.Pages.DeleteModel
+@{
+}
+
+<h2>Delete Person</h2>
+
+<form method="post">
+    <div class="alert alert-warning">
+        Are you sure you want to delete this person?
+    </div>
+    <div>
+        <div class="form-group mb-2">
+            <label for="FirstName">First Name</label>
+            <input type="text" id="FirstName" name="Person.FirstName" class="form-control" disabled value="@Model.Person.FirstName" />
+        </div>
+        <div class="form-group mb-2">
+            <label for="LastName">Last Name</label>
+            <input type="text" id="LastName" name="Person.LastName" class="form-control" disabled value="@Model.Person.LastName" />
+        </div>
+        <div class="form-group mb-2">
+            <label for="RandomNumber">Random Number</label>
+            <input type="number" id="RandomNumber" name="Person.RandomNumber" disabled="disabled" class="form-control" value="@Model.Person.RandomNumber" />
+        </div>
+        <div class="form-group mb-2">
+            <input type="checkbox" id="Active" name="Person.Active" checked="@Model.Person.Active" disabled />
+            <label for="Active">Active</label>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Page("./Index")" class="btn btn-secondary">Cancel</a>
+</form>

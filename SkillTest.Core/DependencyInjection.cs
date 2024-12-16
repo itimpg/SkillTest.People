@@ -14,7 +14,8 @@ namespace SkillTest.Core
             services.AddValidatorsFromAssemblyContaining<PersonCreateRequestValidator>();
             services.AddAutoMapper(typeof(PeopleToPersonResponseMappingProfile).Assembly);
             services.AddScoped<IPeopleService, PeopleService>();
-
+            //services.AddScoped<IPeopleService, MockPeopleService>();
+            
             return services;
         }
     }

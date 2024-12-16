@@ -36,7 +36,7 @@ namespace SkillTest.Core.Services
 
         public async Task<bool> DeletePerson(Guid id)
         {
-            People existingPeople = await _repository.GetPeopleById(id);
+            People? existingPeople = await _repository.GetPeopleById(id);
             if (existingPeople == null)
             {
                 return false;

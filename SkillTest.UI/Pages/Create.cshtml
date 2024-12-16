@@ -1,0 +1,32 @@
+﻿@page
+@model SkillTest.UI.Pages.CreateModel
+@{
+}
+
+<h2>Create Person</h2>
+
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+            <div class="form-group mb-2">
+                <label for="FirstName">First Name</label>
+                <input type="text" id="FirstName" name="FirstName" class="form-control" />
+                <span asp-validation-for="Person.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2">
+                <label for="LastName">Last Name</label>
+                <input type="text" id="LastName" name="LastName" class="form-control" />
+                <span asp-validation-for="Person.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-2">
+                <input type="checkbox" id="Active" name="Active" />
+                <label for="Active">Active</label>
+            </div>
+
+            <div class="text-end">
+                <button type="submit" class="btn btn-primary">Create</button>
+                <a href="@Url.Page("./Index")" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div> 

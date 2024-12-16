@@ -4,6 +4,7 @@ using SkillTest.Core;
 using SkillTest.Infra;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddAuthorization();
 builder.Services.AddCore();
 builder.Services.AddInfra();
@@ -15,11 +16,12 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+string allowedHost = builder.Configuration["AllowedCors"]!;
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:4200")
+        builder.WithOrigins(allowedHost)
         .AllowAnyMethod()
         .AllowAnyHeader();
     });

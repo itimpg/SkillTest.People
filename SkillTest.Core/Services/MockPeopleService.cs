@@ -9,7 +9,7 @@ namespace SkillTest.Core.Services
         {
             return Task.FromResult(new PersonResponse
             {
-                id = Guid.NewGuid(),
+                Id = Guid.NewGuid(),
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 RandomNumber = new Random().Next(),
@@ -30,7 +30,7 @@ namespace SkillTest.Core.Services
             {
                 items.Add(new PersonResponse
                 {
-                    id = Guid.NewGuid(),
+                    Id = Guid.NewGuid(),
                     FirstName = $"FirstName{i}",
                     LastName = $"LastName{i}",
                     RandomNumber = new Random().Next(),
@@ -45,7 +45,7 @@ namespace SkillTest.Core.Services
         {
             return Task.FromResult(new PersonResponse
             {
-                id = Guid.NewGuid(),
+                Id = Guid.NewGuid(),
                 FirstName = $"FirstName{0}",
                 LastName = $"LastName{0}",
                 RandomNumber = new Random().Next(),
@@ -57,7 +57,7 @@ namespace SkillTest.Core.Services
         {
             return Task.FromResult(new PersonResponse
             {
-                id = request.Id,
+                Id = request.Id,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 RandomNumber = new Random().Next(),

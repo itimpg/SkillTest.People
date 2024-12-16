@@ -1,5 +1,5 @@
-﻿using SkillTest.Proxy.Proxies;
-using SkillTest.Proxy.ProxyContracts;
+﻿using SkillTest.UI.Proxies;
+using SkillTest.UI.ProxyContracts;
 using SkillTest.UI.MappingProfiles;
 
 namespace SkillTest.UI.Startup

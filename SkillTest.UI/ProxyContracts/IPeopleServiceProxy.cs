@@ -1,6 +1,6 @@
-﻿using SkillTest.Proxy.Models;
+﻿using SkillTest.UI.Models;
 
-namespace SkillTest.Proxy.ProxyContracts
+namespace SkillTest.UI.ProxyContracts
 {
     public interface IPeopleServiceProxy
     {

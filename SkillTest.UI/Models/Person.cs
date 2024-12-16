@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace SkillTest.Proxy.Models
+namespace SkillTest.UI.Models
 {
     public class Person
     {

@@ -45,7 +45,7 @@ namespace SkillTest.API.Controllers
             PersonResponse? response = await _peopleService.CreatePerson(request);
             if (response != null)
             {
-                return Created($"api/people/{response.id}", response);
+                return Created($"api/people/{response.Id}", response);
             }
 
             return Problem("Error in adding people");

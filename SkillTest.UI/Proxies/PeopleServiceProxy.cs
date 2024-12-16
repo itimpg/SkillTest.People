@@ -1,9 +1,9 @@
-﻿using SkillTest.Proxy.Models;
-using SkillTest.Proxy.ProxyContracts;
+﻿using SkillTest.UI.Models;
+using SkillTest.UI.ProxyContracts;
 using System.Text;
 using System.Text.Json;
 
-namespace SkillTest.Proxy.Proxies
+namespace SkillTest.UI.Proxies
 {
     public class PeopleServiceProxy : IPeopleServiceProxy
     {

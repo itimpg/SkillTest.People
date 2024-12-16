@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SkillTest.UI.Models
+namespace SkillTest.UI.ViewModels
 {
     public class PersonViewModel
     {

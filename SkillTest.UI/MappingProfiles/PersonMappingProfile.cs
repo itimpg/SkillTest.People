@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using SkillTest.Proxy.Models;
 using SkillTest.UI.Models;
+using SkillTest.UI.ViewModels;
 
 namespace SkillTest.UI.MappingProfiles
 {

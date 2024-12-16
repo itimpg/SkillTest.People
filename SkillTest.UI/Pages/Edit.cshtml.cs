@@ -1,9 +1,9 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using SkillTest.Proxy.Models;
-using SkillTest.Proxy.ProxyContracts;
 using SkillTest.UI.Models;
+using SkillTest.UI.ProxyContracts;
+using SkillTest.UI.ViewModels;
 
 namespace SkillTest.UI.Pages
 {

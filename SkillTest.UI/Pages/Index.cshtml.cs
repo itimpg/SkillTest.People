@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using SkillTest.Proxy.Models;
-using SkillTest.Proxy.ProxyContracts;
+using SkillTest.UI.Models;
+using SkillTest.UI.ProxyContracts;
 
 namespace SkillTest.UI.Pages
 {

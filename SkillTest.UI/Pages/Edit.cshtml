@@ -23,8 +23,8 @@
                 <input type="number" id="RandomNumber" name="Person.RandomNumber" disabled="disabled" class="form-control" value="@Model.Person.RandomNumber" />
             </div>
             <div class="form-group mb-2">
-                <input type="checkbox" id="Active" name="Person.Active" checked="@Model.Person.Active" />
-                <label for="Active">Active</label>
+                <input type="checkbox" id="Active" asp-for="Person.Active" class="form-check-input" />
+                <label for="Active" class="form-check-label">Active</label>
             </div>
             <div class="text-end">
                 <button type="submit" class="btn btn-primary">Save</button>

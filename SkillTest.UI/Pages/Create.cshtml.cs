@@ -19,7 +19,7 @@ namespace SkillTest.UI.Pages
         }
 
         [BindProperty]
-        public PersonViewModel Person { get; set; }
+        public PersonViewModel Person { get; set; } = new PersonViewModel();
 
         public async Task<IActionResult> OnPost()
         {

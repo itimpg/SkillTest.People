@@ -10,19 +10,18 @@
         <form method="post">
             <div class="form-group mb-2">
                 <label for="FirstName">First Name</label>
-                <input type="text" id="FirstName" name="Person.FirstName" class="form-control" />
+                <input type="text" id="FirstName" name="Person.FirstName" class="form-control" value="@Model.Person.FirstName" />
                 <span asp-validation-for="Person.FirstName" class="text-danger"></span>
             </div>
             <div class="form-group mb-2">
                 <label for="LastName">Last Name</label>
-                <input type="text" id="LastName" name="Person.LastName" class="form-control" />
+                <input type="text" id="LastName" name="Person.LastName" class="form-control" value="@Model.Person.LastName" />
                 <span asp-validation-for="Person.LastName" class="text-danger"></span>
             </div>
             <div class="form-group mb-2">
-                <input type="checkbox" id="Active" name="Active" />
-                <label for="Active">Active</label>
+                <input type="checkbox" id="Active" asp-for="Person.Active" class="form-check-input" />
+                <label for="Active" class="form-check-label">Active</label>
             </div>
-
             <div class="text-end">
                 <button type="submit" class="btn btn-primary">Create</button>
                 <a href="@Url.Page("./Index")" class="btn btn-secondary">Cancel</a>
